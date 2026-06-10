@@ -2,32 +2,26 @@ let lang = localStorage.getItem("lang") || "he";
 
 const UI = {
   he:{
-    dir:"rtl", langBtn:"English", navTimeline:"ציר זמן", navGallery:"גלריה", navSources:"מקורות",
+    dir:"rtl", langBtn:"English", navSources:"מקורות", discoverersBtn:"מגלים",
     eyebrow:"אתר דו־לשוני בעברית ובאנגלית",
-    heroTitle:"המגלים ששינו את דרך החשיבה המדעית",
-    heroSubtitle:"מקופרניקוס וגלילאו ועד וסאליוס, דקארט ובייקון — מסע חזותי על תגליות, ניסויים, תצפיות, אטימולוגיה והשפעה היסטורית.",
-    start:"התחל בגלריה", seeTimeline:"ראה ציר זמן", heroCardTitle:"1543–1687",
-    heroCardText:"תקופה שבה תצפית, מתמטיקה וניסוי החלו להחליף סמכות עתיקה.",
-    siteIncludes:"מה האתר כולל?", siteIncludesText:"לכל דמות: שנות חיים, מקום לידה ופטירה, גילוי מרכזי, השפעה, אטימולוגיה מפורקת, תמונת דיוקן ותמונה/איור של הגילוי.",
-    howToUse:"איך משתמשים?", howToUseText:"לחץ על כרטיס דמות כדי לפתוח חלון מידע מלא. אפשר להחליף שפה בלחיצה אחת בין עברית לאנגלית.",
-    timelineEyebrow:"ציר זמן", timelineTitle:"מהפכה מדעית במסלול אחד",
-    t1473:"נולד קופרניקוס", t1543:"קופרניקוס מפרסם את De revolutionibus; וסאליוס מפרסם את Fabrica", t1572:"טיכו ברהה מתעד סופרנובה", t1610:"גלילאו משתמש בטלסקופ לתצפיות שמימיות", t1619:"קפלר מפרסם את חוקי תנועת הפלנטות", t1637:"בייקון ודקארט מעצבים מתודה, ספק, תצפית ומתמטיקה",
-    galleryEyebrow:"גלריה אינטראקטיבית", galleryTitle:"המגלים והגילויים", sourcesEyebrow:"ביבליוגרפיה ראשונית", sourcesTitle:"מקורות מומלצים להרחבה", footer:"אתר מחקר חזותי — מוכן להעלאה ל־GitHub Pages.",
-    birth:"מקום לידה", death:"מקום פטירה", discovery:"הגילוי", impact:"השפעה", etymology:"אטימולוגיה מפורקת", portraitMissing:"הוסף כאן תמונת דיוקן", details:"פתח מידע מלא"
+    heroTitle:"מגלי המהפכה המדעית",
+    heroSubtitle:"אתר קצר ונקי על שבע דמויות ששינו את המדע: תצפית, מתמטיקה, אנטומיה והשיטה המדעית.",
+    galleryEyebrow:"בחר מגלה", galleryTitle:"דפים נפרדים לכל מגלה",
+    sourcesEyebrow:"מקורות", sourcesTitle:"מקורות מומלצים להרחבה",
+    footer:"אתר מחקר חזותי — מוכן להעלאה ל־GitHub Pages.",
+    birth:"מקום לידה", death:"מקום פטירה", discovery:"הגילוי", impact:"השפעה", etymology:"אטימולוגיה מפורקת",
+    portraitMissing:"הוסף כאן תמונת דיוקן", openPage:"פתח דף נפרד", home:"חזרה לדף הבית", summary:"תקציר", biography:"רקע היסטורי", discoveryTitle:"הגילוי המרכזי", impactTitle:"השפעה היסטורית"
   },
   en:{
-    dir:"ltr", langBtn:"עברית", navTimeline:"Timeline", navGallery:"Gallery", navSources:"Sources",
+    dir:"ltr", langBtn:"עברית", navSources:"Sources", discoverersBtn:"Discoverers",
     eyebrow:"A bilingual Hebrew–English website",
-    heroTitle:"The discoverers who changed scientific thinking",
-    heroSubtitle:"From Copernicus and Galileo to Vesalius, Descartes, and Bacon — a visual journey through discoveries, experiments, observations, etymology, and historical impact.",
-    start:"Start with the gallery", seeTimeline:"See timeline", heroCardTitle:"1543–1687",
-    heroCardText:"An era in which observation, mathematics, and experiment began replacing ancient authority.",
-    siteIncludes:"What does the site include?", siteIncludesText:"For each figure: life years, birth and death places, core discovery, impact, decomposed etymology, portrait image, and image/illustration of the discovery.",
-    howToUse:"How to use it", howToUseText:"Click a figure card to open a full information modal. Switch between Hebrew and English with one button.",
-    timelineEyebrow:"Timeline", timelineTitle:"The Scientific Revolution in one path",
-    t1473:"Copernicus is born", t1543:"Copernicus publishes De revolutionibus; Vesalius publishes the Fabrica", t1572:"Tycho Brahe records a supernova", t1610:"Galileo uses the telescope for celestial observations", t1619:"Kepler publishes the laws of planetary motion", t1637:"Bacon and Descartes reshape method, doubt, observation, and mathematics",
-    galleryEyebrow:"Interactive gallery", galleryTitle:"The discoverers and discoveries", sourcesEyebrow:"Initial bibliography", sourcesTitle:"Recommended sources for expansion", footer:"A visual research website — ready for GitHub Pages.",
-    birth:"Birth place", death:"Death place", discovery:"Discovery", impact:"Impact", etymology:"Decomposed etymology", portraitMissing:"Add portrait image here", details:"Open full profile"
+    heroTitle:"Discoverers of the Scientific Revolution",
+    heroSubtitle:"A clean bilingual site about seven figures who changed science through observation, mathematics, anatomy, and scientific method.",
+    galleryEyebrow:"Choose a discoverer", galleryTitle:"Separate pages for each discoverer",
+    sourcesEyebrow:"Sources", sourcesTitle:"Recommended sources for expansion",
+    footer:"A visual research website — ready for GitHub Pages.",
+    birth:"Birth place", death:"Death place", discovery:"Discovery", impact:"Impact", etymology:"Decomposed etymology",
+    portraitMissing:"Add portrait image here", openPage:"Open separate page", home:"Back to homepage", summary:"Summary", biography:"Historical background", discoveryTitle:"Core discovery", impactTitle:"Historical impact"
   }
 };
 
@@ -38,51 +32,104 @@ function applyLang(){
     const key = el.dataset.i18n;
     if(UI[lang][key]) el.textContent = UI[lang][key];
   });
-  document.querySelector(".brand").textContent = lang === "he" ? "מגלי המהפכה המדעית" : "Scientific Revolution Discoverers";
-  document.getElementById("langBtn").textContent = UI[lang].langBtn;
+  const brand = document.querySelector(".brand");
+  if(brand) brand.textContent = lang === "he" ? "מגלי המהפכה המדעית" : "Scientific Revolution Discoverers";
+  const langBtn = document.getElementById("langBtn");
+  if(langBtn) langBtn.textContent = UI[lang].langBtn;
+  renderDiscoverersMenu();
   renderCards();
+  renderProfilePage();
 }
-document.getElementById("langBtn").addEventListener("click",()=>{
-  lang = lang === "he" ? "en" : "he";
-  localStorage.setItem("lang", lang);
-  applyLang();
-});
 
-function imageTag(src, alt, fallbackText){
-  return `<img src="${src}" alt="${alt}" onerror="this.outerHTML='<div class=&quot;fallback&quot;>${fallbackText}</div>'">`;
+const langBtn = document.getElementById("langBtn");
+if(langBtn){
+  langBtn.addEventListener("click",()=>{
+    lang = lang === "he" ? "en" : "he";
+    localStorage.setItem("lang", lang);
+    applyLang();
+  });
+}
+
+function imageTag(src, alt, fallbackText, cls=""){
+  return `<img class="${cls}" src="${src}" alt="${alt}" onerror="this.outerHTML='<div class=&quot;fallback&quot;>${fallbackText}</div>'">`;
+}
+
+function pageUrl(id){
+  return `discoverer.html?id=${encodeURIComponent(id)}`;
+}
+
+function renderDiscoverersMenu(){
+  const panel = document.getElementById("discoverersPanel");
+  if(!panel) return;
+  panel.innerHTML = SCIENTISTS.map(s=>{
+    const t = s[lang];
+    return `<a class="discoverer-link" href="${pageUrl(s.id)}">
+      <img src="${s.portrait}" alt="${t.name}">
+      <span><strong>${t.name}</strong>${t.lifespan}</span>
+    </a>`;
+  }).join("");
+}
+
+const discoverersBtn = document.getElementById("discoverersBtn");
+const discoverersPanel = document.getElementById("discoverersPanel");
+if(discoverersBtn && discoverersPanel){
+  discoverersBtn.addEventListener("click",()=>{
+    const isOpen = discoverersPanel.getAttribute("aria-hidden") === "false";
+    discoverersPanel.setAttribute("aria-hidden", String(isOpen));
+    discoverersBtn.setAttribute("aria-expanded", String(!isOpen));
+  });
+  document.addEventListener("click",(e)=>{
+    if(!e.target.closest(".discoverers-menu")){
+      discoverersPanel.setAttribute("aria-hidden","true");
+      discoverersBtn.setAttribute("aria-expanded","false");
+    }
+  });
 }
 
 function renderCards(){
   const cards = document.getElementById("cards");
-  cards.innerHTML = SCIENTISTS.map((s,i)=>{
+  if(!cards) return;
+  cards.innerHTML = SCIENTISTS.map(s=>{
     const t = s[lang];
-    return `<article class="card" tabindex="0" onclick="openScientist('${s.id}')" onkeydown="if(event.key==='Enter')openScientist('${s.id}')">
-      <div class="card-media">
-        ${imageTag(s.portrait, t.name, UI[lang].portraitMissing + "<br>" + s.portrait)}
-        ${imageTag(s.visual, t.discovery, t.discovery)}
-      </div>
+    return `<article class="card">
+      <a href="${pageUrl(s.id)}" aria-label="${t.name}">
+        <div class="card-media">
+          ${imageTag(s.portrait, t.name, UI[lang].portraitMissing + "<br>" + s.portrait)}
+          ${imageTag(s.visual, t.discovery, t.discovery)}
+        </div>
+      </a>
       <div class="card-body">
         <h3>${t.name}</h3>
         <p class="meta">${t.role} · ${t.lifespan}</p>
         <p>${t.summary}</p>
-        <p><strong>${UI[lang].details}</strong></p>
+        <div class="card-actions"><a class="button" href="${pageUrl(s.id)}">${UI[lang].openPage}</a></div>
       </div>
     </article>`;
   }).join("");
 }
 
-function openScientist(id){
-  const s = SCIENTISTS.find(x=>x.id===id);
+function getCurrentScientist(){
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id") || "galileo";
+  return SCIENTISTS.find(s=>s.id===id) || SCIENTISTS[0];
+}
+
+function renderProfilePage(){
+  const root = document.getElementById("profileRoot");
+  if(!root) return;
+  const s = getCurrentScientist();
   const t = s[lang];
-  document.getElementById("modalBody").innerHTML = `
-    <div class="modal-grid">
-      <div>
-        ${imageTag(s.portrait, t.name, UI[lang].portraitMissing + "<br>" + s.portrait)}
-        ${imageTag(s.visual, t.discovery, t.discovery)}
+  document.title = `${t.name} | ${lang === "he" ? "מגלי המהפכה המדעית" : "Scientific Revolution Discoverers"}`;
+  root.innerHTML = `
+    <a class="back-link" href="index.html">← ${UI[lang].home}</a>
+    <section class="profile-hero">
+      <div class="profile-images">
+        ${imageTag(s.portrait, t.name, UI[lang].portraitMissing + "<br>" + s.portrait, "profile-portrait")}
+        ${imageTag(s.visual, t.discovery, t.discovery, "profile-visual")}
       </div>
-      <div>
+      <div class="profile-content">
         <p class="eyebrow">${t.role}</p>
-        <h2>${t.name}</h2>
+        <h1>${t.name}</h1>
         <p class="meta">${t.lifespan}</p>
         <table class="info-table">
           <tr><th>${UI[lang].birth}</th><td>${t.birth}</td></tr>
@@ -90,14 +137,14 @@ function openScientist(id){
           <tr><th>${UI[lang].discovery}</th><td>${t.discovery}</td></tr>
           <tr><th>${UI[lang].impact}</th><td>${t.impact}</td></tr>
         </table>
-        <h3>${UI[lang].etymology}</h3>
-        <div class="etymology">
-          ${t.etymology.map(([term,ex])=>`<div><strong>${term}</strong><br>${ex}</div>`).join("")}
+        <div class="detail-grid">
+          <div class="detail-box"><h2>${UI[lang].summary}</h2><p>${t.summary}</p></div>
+          <div class="detail-box"><h2>${UI[lang].discoveryTitle}</h2><p>${t.discovery}</p></div>
+          <div class="detail-box"><h2>${UI[lang].impactTitle}</h2><p>${t.impact}</p></div>
+          <div class="detail-box"><h2>${UI[lang].etymology}</h2><div class="etymology">${t.etymology.map(([term,ex])=>`<div><strong>${term}</strong><br>${ex}</div>`).join("")}</div></div>
         </div>
       </div>
-    </div>`;
-  document.getElementById("modal").setAttribute("aria-hidden","false");
+    </section>`;
 }
-document.getElementById("closeModal").addEventListener("click",()=>document.getElementById("modal").setAttribute("aria-hidden","true"));
-document.getElementById("modal").addEventListener("click",(e)=>{ if(e.target.id==="modal") e.currentTarget.setAttribute("aria-hidden","true"); });
+
 applyLang();
