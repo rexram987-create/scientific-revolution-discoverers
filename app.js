@@ -16,7 +16,7 @@ const UI = {
     sourcesEyebrow:"מקורות", sourcesTitle:"מקורות מומלצים להרחבה",
     footer:"אתר מחקר חזותי — מוכן להעלאה ל־GitHub Pages.",
     birth:"מקום לידה", death:"מקום פטירה", discovery:"הגילוי", impact:"השפעה", etymology:"אטימולוגיה מפורקת",
-    portraitMissing:"הוסף כאן תמונת דיוקן", home:"חזרה לדף הבית", summary:"תקציר", biography:"רקע היסטורי", discoveryTitle:"הגילוי המרכזי", impactTitle:"השפעה היסטורית"
+    portraitMissing:"הוסף כאן תמונת דיוקן", home:"חזרה לדף הבית", summary:"תקציר", expandedTitle:"הרחבת התוכן", discoveryTitle:"הגילוי המרכזי", impactTitle:"השפעה היסטורית", personalConsequencesTitle:"השלכות אישיות על המגלה"
   },
   en:{
     dir:"ltr", langBtn:"עברית", navSources:"Sources", discoverersBtn:"Discoverers",
@@ -33,7 +33,7 @@ const UI = {
     sourcesEyebrow:"Sources", sourcesTitle:"Recommended sources for expansion",
     footer:"A visual research website — ready for GitHub Pages.",
     birth:"Birth place", death:"Death place", discovery:"Discovery", impact:"Impact", etymology:"Decomposed etymology",
-    portraitMissing:"Add portrait image here", home:"Back to homepage", summary:"Summary", biography:"Historical background", discoveryTitle:"Core discovery", impactTitle:"Historical impact"
+    portraitMissing:"Add portrait image here", home:"Back to homepage", summary:"Summary", expandedTitle:"Expanded content", discoveryTitle:"Core discovery", impactTitle:"Historical impact", personalConsequencesTitle:"Personal consequences for the discoverer"
   }
 };
 
@@ -127,10 +127,12 @@ function renderProfilePage(){
           <tr><th>${UI[lang].impact}</th><td>${t.impact}</td></tr>
         </table>
         <div class="detail-grid">
-          <div class="detail-box"><h2>${UI[lang].summary}</h2><p>${t.summary}</p></div>
+          <div class="detail-box wide"><h2>${UI[lang].summary}</h2><p>${t.summary}</p></div>
+          <div class="detail-box wide"><h2>${UI[lang].expandedTitle}</h2><p>${t.expanded || t.summary}</p></div>
           <div class="detail-box"><h2>${UI[lang].discoveryTitle}</h2><p>${t.discovery}</p></div>
           <div class="detail-box"><h2>${UI[lang].impactTitle}</h2><p>${t.impact}</p></div>
-          <div class="detail-box"><h2>${UI[lang].etymology}</h2><div class="etymology">${t.etymology.map(([term,ex])=>`<div><strong>${term}</strong><br>${ex}</div>`).join("")}</div></div>
+          <div class="detail-box wide"><h2>${UI[lang].personalConsequencesTitle}</h2><p>${t.personalConsequences || ""}</p></div>
+          <div class="detail-box wide"><h2>${UI[lang].etymology}</h2><div class="etymology">${t.etymology.map(([term,ex])=>`<div><strong>${term}</strong><br>${ex}</div>`).join("")}</div></div>
         </div>
       </div>
     </section>`;
