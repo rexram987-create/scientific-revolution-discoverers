@@ -5,23 +5,35 @@ const UI = {
     dir:"rtl", langBtn:"English", navSources:"מקורות", discoverersBtn:"מגלים",
     eyebrow:"אתר דו־לשוני בעברית ובאנגלית",
     heroTitle:"מגלי המהפכה המדעית",
-    heroSubtitle:"אתר קצר ונקי על שבע דמויות ששינו את המדע: תצפית, מתמטיקה, אנטומיה והשיטה המדעית.",
-    galleryEyebrow:"בחר מגלה", galleryTitle:"דפים נפרדים לכל מגלה",
+    heroSubtitle:"אתר מבוא על שבע דמויות מרכזיות ששינו את המדע האירופי בראשית העת החדשה — דרך תצפית, מתמטיקה, אנטומיה, ניסוי ושיטה מדעית.",
+    introEyebrow:"על האתר", introTitle:"מה אפשר למצוא כאן?",
+    introOneTitle:"מסע בין מגלים",
+    introOneText:"האתר מציג את גליליאו, קופרניקוס, קפלר, טיכו ברהה, פרנסיס בייקון, רנה דקארט ואנדראס וסאליוס — דמויות שפעלו בתחומי האסטרונומיה, המתמטיקה, הפילוסופיה, הרפואה והשיטה המדעית.",
+    introTwoTitle:"דף נפרד לכל דמות",
+    introTwoText:"לכל מגלה יש דף משלו עם שנות חיים, מקום לידה ופטירה, גילוי מרכזי, השפעה היסטורית ואטימולוגיה מפורקת של מושגים ושמות חשובים.",
+    introThreeTitle:"איך מנווטים?",
+    introThreeText:"לחיצה על כפתור “מגלים” בסרגל הניווט פותחת תפריט נגלל עם שמות כל הדמויות. משם אפשר לעבור ישירות לדף האישי של כל מגלה.",
     sourcesEyebrow:"מקורות", sourcesTitle:"מקורות מומלצים להרחבה",
     footer:"אתר מחקר חזותי — מוכן להעלאה ל־GitHub Pages.",
     birth:"מקום לידה", death:"מקום פטירה", discovery:"הגילוי", impact:"השפעה", etymology:"אטימולוגיה מפורקת",
-    portraitMissing:"הוסף כאן תמונת דיוקן", openPage:"פתח דף נפרד", home:"חזרה לדף הבית", summary:"תקציר", biography:"רקע היסטורי", discoveryTitle:"הגילוי המרכזי", impactTitle:"השפעה היסטורית"
+    portraitMissing:"הוסף כאן תמונת דיוקן", home:"חזרה לדף הבית", summary:"תקציר", biography:"רקע היסטורי", discoveryTitle:"הגילוי המרכזי", impactTitle:"השפעה היסטורית"
   },
   en:{
     dir:"ltr", langBtn:"עברית", navSources:"Sources", discoverersBtn:"Discoverers",
     eyebrow:"A bilingual Hebrew–English website",
     heroTitle:"Discoverers of the Scientific Revolution",
-    heroSubtitle:"A clean bilingual site about seven figures who changed science through observation, mathematics, anatomy, and scientific method.",
-    galleryEyebrow:"Choose a discoverer", galleryTitle:"Separate pages for each discoverer",
+    heroSubtitle:"An introductory site about seven central figures who changed early modern European science through observation, mathematics, anatomy, experiment, and scientific method.",
+    introEyebrow:"About the site", introTitle:"What can you find here?",
+    introOneTitle:"A journey through discoverers",
+    introOneText:"The site presents Galileo, Copernicus, Kepler, Tycho Brahe, Francis Bacon, René Descartes, and Andreas Vesalius — figures active in astronomy, mathematics, philosophy, medicine, and scientific method.",
+    introTwoTitle:"A separate page for each figure",
+    introTwoText:"Each discoverer has a dedicated page with life years, birth and death places, a core discovery, historical impact, and decomposed etymology of important terms and names.",
+    introThreeTitle:"How to navigate",
+    introThreeText:"Click the “Discoverers” button in the navigation bar to open a scrollable menu with all the figures. From there, you can go directly to each discoverer’s personal page.",
     sourcesEyebrow:"Sources", sourcesTitle:"Recommended sources for expansion",
     footer:"A visual research website — ready for GitHub Pages.",
     birth:"Birth place", death:"Death place", discovery:"Discovery", impact:"Impact", etymology:"Decomposed etymology",
-    portraitMissing:"Add portrait image here", openPage:"Open separate page", home:"Back to homepage", summary:"Summary", biography:"Historical background", discoveryTitle:"Core discovery", impactTitle:"Historical impact"
+    portraitMissing:"Add portrait image here", home:"Back to homepage", summary:"Summary", biography:"Historical background", discoveryTitle:"Core discovery", impactTitle:"Historical impact"
   }
 };
 
@@ -37,7 +49,6 @@ function applyLang(){
   const langBtn = document.getElementById("langBtn");
   if(langBtn) langBtn.textContent = UI[lang].langBtn;
   renderDiscoverersMenu();
-  renderCards();
   renderProfilePage();
 }
 
@@ -84,28 +95,6 @@ if(discoverersBtn && discoverersPanel){
       discoverersBtn.setAttribute("aria-expanded","false");
     }
   });
-}
-
-function renderCards(){
-  const cards = document.getElementById("cards");
-  if(!cards) return;
-  cards.innerHTML = SCIENTISTS.map(s=>{
-    const t = s[lang];
-    return `<article class="card">
-      <a href="${pageUrl(s.id)}" aria-label="${t.name}">
-        <div class="card-media">
-          ${imageTag(s.portrait, t.name, UI[lang].portraitMissing + "<br>" + s.portrait)}
-          ${imageTag(s.visual, t.discovery, t.discovery)}
-        </div>
-      </a>
-      <div class="card-body">
-        <h3>${t.name}</h3>
-        <p class="meta">${t.role} · ${t.lifespan}</p>
-        <p>${t.summary}</p>
-        <div class="card-actions"><a class="button" href="${pageUrl(s.id)}">${UI[lang].openPage}</a></div>
-      </div>
-    </article>`;
-  }).join("");
 }
 
 function getCurrentScientist(){
