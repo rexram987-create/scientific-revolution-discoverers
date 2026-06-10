@@ -69,6 +69,11 @@ function pageUrl(id){
   return `discoverer.html?id=${encodeURIComponent(id)}`;
 }
 
+function renderTextBlock(value){
+  const parts = Array.isArray(value) ? value : String(value || "").split("\n").filter(Boolean);
+  return parts.map(part => `<p>${part}</p>`).join("");
+}
+
 function renderDiscoverersMenu(){
   const panel = document.getElementById("discoverersPanel");
   if(!panel) return;
@@ -127,11 +132,11 @@ function renderProfilePage(){
           <tr><th>${UI[lang].impact}</th><td>${t.impact}</td></tr>
         </table>
         <div class="detail-grid">
-          <div class="detail-box wide"><h2>${UI[lang].summary}</h2><p>${t.summary}</p></div>
-          <div class="detail-box wide"><h2>${UI[lang].expandedTitle}</h2><p>${t.expanded || t.summary}</p></div>
-          <div class="detail-box"><h2>${UI[lang].discoveryTitle}</h2><p>${t.discovery}</p></div>
-          <div class="detail-box"><h2>${UI[lang].impactTitle}</h2><p>${t.impact}</p></div>
-          <div class="detail-box wide"><h2>${UI[lang].personalConsequencesTitle}</h2><p>${t.personalConsequences || ""}</p></div>
+          <div class="detail-box wide"><h2>${UI[lang].summary}</h2>${renderTextBlock(t.summary)}</div>
+          <div class="detail-box wide"><h2>${UI[lang].expandedTitle}</h2>${renderTextBlock(t.expanded || t.summary)}</div>
+          <div class="detail-box"><h2>${UI[lang].discoveryTitle}</h2>${renderTextBlock(t.discovery)}</div>
+          <div class="detail-box"><h2>${UI[lang].impactTitle}</h2>${renderTextBlock(t.impact)}</div>
+          <div class="detail-box wide"><h2>${UI[lang].personalConsequencesTitle}</h2>${renderTextBlock(t.personalConsequences || "")}</div>
           <div class="detail-box wide"><h2>${UI[lang].etymology}</h2><div class="etymology">${t.etymology.map(([term,ex])=>`<div><strong>${term}</strong><br>${ex}</div>`).join("")}</div></div>
         </div>
       </div>
