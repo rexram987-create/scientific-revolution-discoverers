@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>מגלי המהפכה המדעית | Discoverers of the Scientific Revolution</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="#top">מגלי המהפכה המדעית</a>
+    <div class="nav-actions">
+      <button id="langBtn" class="pill">English</button>
+      <a href="#timeline" class="nav-link" data-i18n="navTimeline">ציר זמן</a>
+      <a href="#gallery" class="nav-link" data-i18n="navGallery">גלריה</a>
+      <a href="#sources" class="nav-link" data-i18n="navSources">מקורות</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow" data-i18n="eyebrow">אתר דו־לשוני בעברית ובאנגלית</p>
+      <h1 data-i18n="heroTitle">המגלים ששינו את דרך החשיבה המדעית</h1>
+      <p data-i18n="heroSubtitle">מקופרניקוס וגלילאו ועד וסאליוס, דקארט ובייקון — מסע חזותי על תגליות, ניסויים, תצפיות, אטימולוגיה והשפעה היסטורית.</p>
+      <div class="hero-buttons">
+        <a class="button" href="#gallery" data-i18n="start">התחל בגלריה</a>
+        <a class="button secondary" href="#timeline" data-i18n="seeTimeline">ראה ציר זמן</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="orbit"></div>
+      <h2 data-i18n="heroCardTitle">1543–1687</h2>
+      <p data-i18n="heroCardText">תקופה שבה תצפית, מתמטיקה וניסוי החלו להחליף סמכות עתיקה.</p>
+    </div>
+  </section>
+
+  <section class="intro-grid">
+    <article>
+      <h2 data-i18n="siteIncludes">מה האתר כולל?</h2>
+      <p data-i18n="siteIncludesText">לכל דמות: שנות חיים, מקום לידה ופטירה, גילוי מרכזי, השפעה, אטימולוגיה מפורקת, תמונת דיוקן ותמונה/איור של הגילוי.</p>
+    </article>
+    <article>
+      <h2 data-i18n="howToUse">איך משתמשים?</h2>
+      <p data-i18n="howToUseText">לחץ על כרטיס דמות כדי לפתוח חלון מידע מלא. אפשר להחליף שפה בלחיצה אחת בין עברית לאנגלית.</p>
+    </article>
+  </section>
+
+  <section id="timeline" class="section">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="timelineEyebrow">ציר זמן</p>
+      <h2 data-i18n="timelineTitle">מהפכה מדעית במסלול אחד</h2>
+    </div>
+    <div class="timeline">
+      <div><strong>1473</strong><span data-i18n="t1473">נולד קופרניקוס</span></div>
+      <div><strong>1543</strong><span data-i18n="t1543">קופרניקוס מפרסם את De revolutionibus; וסאליוס מפרסם את Fabrica</span></div>
+      <div><strong>1572</strong><span data-i18n="t1572">טיכו ברהה מתעד סופרנובה</span></div>
+      <div><strong>1609–1610</strong><span data-i18n="t1610">גלילאו משתמש בטלסקופ לתצפיות שמימיות</span></div>
+      <div><strong>1609–1619</strong><span data-i18n="t1619">קפלר מפרסם את חוקי תנועת הפלנטות</span></div>
+      <div><strong>1620–1637</strong><span data-i18n="t1637">בייקון ודקארט מעצבים מתודה, ספק, תצפית ומתמטיקה</span></div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="galleryEyebrow">גלריה אינטראקטיבית</p>
+      <h2 data-i18n="galleryTitle">המגלים והגילויים</h2>
+    </div>
+    <div id="cards" class="cards"></div>
+  </section>
+
+  <section id="sources" class="section sources">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="sourcesEyebrow">ביבליוגרפיה ראשונית</p>
+      <h2 data-i18n="sourcesTitle">מקורות מומלצים להרחבה</h2>
+    </div>
+    <ul>
+      <li>Encyclopaedia Britannica — biographies of Galileo, Copernicus, Kepler, Tycho Brahe, Bacon, Descartes, Vesalius.</li>
+      <li>Stanford Encyclopedia of Philosophy — entries on Francis Bacon and René Descartes.</li>
+      <li>NASA / ESA education materials — heliocentrism, planetary motion, telescope observations.</li>
+      <li>U.S. National Library of Medicine — historical anatomy collections and Vesalius.</li>
+      <li>Wikimedia Commons — public-domain portraits and historical diagrams, after checking each file license.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p data-i18n="footer">אתר מחקר חזותי — מוכן להעלאה ל־GitHub Pages.</p>
+</footer>
+
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="modal-panel">
+    <button id="closeModal" class="close">×</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
