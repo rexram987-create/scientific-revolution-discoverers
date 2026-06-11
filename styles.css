@@ -51,7 +51,11 @@ p,li,td,th{font-size:1.08rem}
   padding:12px 18px;
   cursor:pointer;
   text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 }
+.secondary-button{background:transparent;color:var(--text)}
 .menu-button:after{content:" ▾";font-size:.9em}
 .discoverers-menu{position:relative}
 .discoverers-panel{
@@ -164,15 +168,36 @@ footer{text-align:center;color:var(--muted);padding:36px;border-top:1px solid va
 .etymology div{font-size:1.08rem;line-height:1.8}
 .etymology strong{color:var(--accent);font-size:1.08rem}
 .about-main{max-width:1180px;margin:auto;padding:54px 18px 80px}
+.upgraded-about{max-width:1240px}
 .about-card{display:grid;grid-template-columns:.75fr 1.25fr;gap:30px;align-items:center}
-.about-photo{width:100%;max-height:520px;object-fit:cover;border-radius:26px;border:1px solid var(--line);box-shadow:var(--shadow)}
-.about-content h1{font-size:clamp(2.2rem,5vw,4.6rem);line-height:1.08;margin:0 0 18px;color:var(--accent)}
+.about-hero-card{padding:30px;margin-bottom:26px;position:relative;overflow:hidden}
+.about-hero-card:before{content:"";position:absolute;inset:auto -10% -30% auto;width:360px;height:360px;border-radius:50%;background:rgba(215,181,109,.09);pointer-events:none}
+.about-photo{width:100%;max-height:560px;object-fit:cover;border-radius:26px;border:1px solid var(--line);box-shadow:var(--shadow)}
+.about-content{position:relative;z-index:1}
+.about-content h1{font-size:clamp(2.4rem,5vw,4.9rem);line-height:1.08;margin:0 0 18px;color:var(--accent)}
 .about-content p{font-size:1.16rem;line-height:1.9;color:var(--text)}
+.about-content .lead{font-size:1.28rem;color:var(--muted)}
+.about-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
 .about-fallback{min-height:300px;border-radius:24px;border:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}
+.about-panel,.about-timeline-preview{
+  background:linear-gradient(145deg, rgba(255,255,255,.065), rgba(255,255,255,.025));
+  border:1px solid var(--line);
+  border-radius:26px;
+  box-shadow:var(--shadow);
+  padding:24px;
+}
+.about-panel h2,.about-timeline-preview h2{font-size:1.7rem;color:var(--accent);margin:.2em 0 .5em}
+.about-panel p{font-size:1.1rem;line-height:1.9}
+.about-timeline-preview{margin-top:22px}
+.about-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+.about-steps div{background:rgba(255,255,255,.055);border:1px solid var(--line);border-radius:18px;padding:18px;display:grid;gap:10px}
+.about-steps strong{font-size:1.5rem;color:var(--accent)}
+.about-steps span{font-size:1.05rem;color:var(--text);line-height:1.6}
 @media(max-width:900px){
   html{font-size:19px}
   body{font-size:1.12rem;line-height:1.9}
-  .cards,.profile-hero,.detail-grid,.intro-columns,.about-card{grid-template-columns:1fr}
+  .cards,.profile-hero,.detail-grid,.intro-columns,.about-card,.about-grid,.about-steps{grid-template-columns:1fr}
   .cards{gap:14px}
   .nav{align-items:flex-start;flex-direction:column}
   .nav-actions{gap:10px}
@@ -186,4 +211,7 @@ footer{text-align:center;color:var(--muted);padding:36px;border-top:1px solid va
   .detail-box h2{font-size:1.42rem}
   .detail-box p{font-size:1.08rem}
   .sources ul{padding:22px 28px}
+  .about-main{padding-top:34px}
+  .about-hero-card,.about-panel,.about-timeline-preview{padding:20px;border-radius:24px}
+  .about-content .lead{font-size:1.16rem}
 }
