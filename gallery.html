@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>גלריה היסטורית | מגלי המהפכה המדעית</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">מגלי המהפכה המדעית</a>
+    <div class="nav-actions">
+      <button id="langBtn" class="pill">English</button>
+      <div class="discoverers-menu">
+        <button id="discoverersBtn" class="pill menu-button" aria-expanded="false" data-i18n="discoverersBtn">מגלים</button>
+        <div id="discoverersPanel" class="discoverers-panel" aria-hidden="true"></div>
+      </div>
+      <a href="timeline.html" class="nav-link" data-i18n="navTimeline">ציר זמן</a>
+      <a href="gallery.html" class="nav-link" data-i18n="navGallery">גלריה</a>
+      <a href="about.html" class="nav-link" data-i18n="navAbout">אודות</a>
+      <a href="index.html#sources" class="nav-link" data-i18n="navSources">מקורות</a>
+    </div>
+  </nav>
+</header>
+
+<main class="gallery-main">
+  <section class="gallery-hero">
+    <p class="eyebrow" data-i18n="galleryEyebrow">גלריה היסטורית</p>
+    <h1 data-i18n="galleryTitle">תמונות המגלים והגילויים</h1>
+    <p data-i18n="galleryIntro">גלריה חזותית המרכזת את דיוקנאות המגלים ואת האיורים ההיסטוריים/מדעיים של הגילויים המרכזיים באתר.</p>
+  </section>
+
+  <section class="gallery-section">
+    <div class="gallery-section-head">
+      <p class="eyebrow" data-i18n="galleryPortraitsEyebrow">דיוקנאות</p>
+      <h2 data-i18n="galleryPortraitsTitle">המגלים עצמם</h2>
+    </div>
+    <div class="gallery-grid">
+      <figure class="gallery-card"><img src="assets/people/galileo-galilei-portrait.jpg" alt="Galileo Galilei"><figcaption><strong data-i18n="gGalileoTitle">גלילאו גליליי</strong><span data-i18n="gGalileoText">תצפית, טלסקופ והערעור על המודל הגאוצנטרי.</span></figcaption></figure>
+      <figure class="gallery-card"><img src="assets/people/nicolaus-copernicus-portrait.jpg" alt="Nicolaus Copernicus"><figcaption><strong data-i18n="gCopernicusTitle">ניקולאוס קופרניקוס</strong><span data-i18n="gCopernicusText">המודל ההליוצנטרי והזזת מרכז היקום מן הארץ אל השמש.</span></figcaption></figure>
+      <figure class="gallery-card"><img src="assets/people/johannes-kepler-portrait.jpg" alt="Johannes Kepler"><figcaption><strong data-i18n="gKeplerTitle">יוהאנס קפלר</strong><span data-i18n="gKeplerText">חוקי תנועת הפלנטות והמסלולים האליפטיים.</span></figcaption></figure>
+      <figure class="gallery-card"><img src="assets/people/tycho-brahe-portrait.jpg" alt="Tycho Brahe"><figcaption><strong data-i18n="gTychoTitle">טיכו ברהה</strong><span data-i18n="gTychoText">מדידות מדויקות, סופרנובה ושביט בעידן שלפני הטלסקופ.</span></figcaption></figure>
+      <figure class="gallery-card"><img src="assets/people/francis-bacon-portrait.jpg" alt="Francis Bacon"><figcaption><strong data-i18n="gBaconTitle">פרנסיס בייקון</strong><span data-i18n="gBaconText">ניסוי, תצפית, אינדוקציה וזהירות מהטיות.</span></figcaption></figure>
+      <figure class="gallery-card"><img src="assets/people/rene-descartes-portrait.jpg" alt="René Descartes"><figcaption><strong data-i18n="gDescartesTitle">רנה דקארט</strong><span data-i18n="gDescartesText">הגאומטריה האנליטית, מערכת הצירים והמתודה.</span></figcaption></figure>
+      <figure class="gallery-card"><img src="assets/people/andreas-vesalius-portrait.jpg" alt="Andreas Vesalius"><figcaption><strong data-i18n="gVesaliusTitle">אנדראס וסאליוס</strong><span data-i18n="gVesaliusText">אנטומיה מודרנית, נתיחה ותצפית ישירה בגוף האדם.</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="gallery-section-head">
+      <p class="eyebrow" data-i18n="galleryDiscoveriesEyebrow">גילויים ורעיונות</p>
+      <h2 data-i18n="galleryDiscoveriesTitle">הדימויים המדעיים</h2>
+    </div>
+    <div class="gallery-grid discovery-grid">
+      <figure class="gallery-card wide-card"><img src="assets/discoveries/galileo-jupiter-moons.svg" alt="Galileo Jupiter moons"><figcaption><strong data-i18n="dGalileoTitle">ירחי צדק</strong><span data-i18n="dGalileoText">תצפית שהראתה שלא כל גוף שמימי מקיף את כדור הארץ.</span></figcaption></figure>
+      <figure class="gallery-card wide-card"><img src="assets/discoveries/copernicus-heliocentric-model.svg" alt="Copernican heliocentric model"><figcaption><strong data-i18n="dCopernicusTitle">המודל ההליוצנטרי</strong><span data-i18n="dCopernicusText">השמש כמרכז מערכת הפלנטות במקום הארץ.</span></figcaption></figure>
+      <figure class="gallery-card wide-card"><img src="assets/discoveries/kepler-elliptical-orbit.svg" alt="Kepler elliptical orbit"><figcaption><strong data-i18n="dKeplerTitle">מסלול אליפטי</strong><span data-i18n="dKeplerText">הוויתור על המעגל המושלם לטובת מדידה מדויקת.</span></figcaption></figure>
+      <figure class="gallery-card wide-card"><img src="assets/discoveries/tycho-observatory.svg" alt="Tycho observatory"><figcaption><strong data-i18n="dTychoTitle">מצפה אורניבורג</strong><span data-i18n="dTychoText">המדע כתשתית של מדידות, מכשירים וארגון ידע.</span></figcaption></figure>
+      <figure class="gallery-card wide-card"><img src="assets/discoveries/bacon-scientific-method.svg" alt="Bacon scientific method"><figcaption><strong data-i18n="dBaconTitle">השיטה המדעית</strong><span data-i18n="dBaconText">תצפית, ניסוי, אינדוקציה וביקורת הטיות.</span></figcaption></figure>
+      <figure class="gallery-card wide-card"><img src="assets/discoveries/descartes-coordinate-plane.svg" alt="Cartesian coordinate plane"><figcaption><strong data-i18n="dDescartesTitle">מערכת צירים</strong><span data-i18n="dDescartesText">חיבור בין גאומטריה לאלגברה באמצעות קואורדינטות.</span></figcaption></figure>
+      <figure class="gallery-card wide-card"><img src="assets/discoveries/vesalius-anatomy-study.svg" alt="Vesalius anatomy"><figcaption><strong data-i18n="dVesaliusTitle">אנטומיה חזותית</strong><span data-i18n="dVesaliusText">גוף האדם כמקור ידע ישיר ולא רק כסמכות טקסטואלית.</span></figcaption></figure>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p data-i18n="footer">אתר מחקר חזותי — מוכן להעלאה ל־GitHub Pages.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="gallery-translations.js"></script>
+</body>
+</html>
