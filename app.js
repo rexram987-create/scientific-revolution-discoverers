@@ -2,7 +2,7 @@ let lang = localStorage.getItem("lang") || "he";
 
 const UI = {
   he:{
-    dir:"rtl", langBtn:"English", navSources:"מקורות", discoverersBtn:"מגלים",
+    dir:"rtl", langBtn:"English", navSources:"מקורות", navAbout:"אודות", discoverersBtn:"מגלים",
     eyebrow:"אתר דו־לשוני בעברית ובאנגלית",
     heroTitle:"מגלי המהפכה המדעית",
     heroSubtitle:"אתר מבוא על שבע דמויות מרכזיות ששינו את המדע האירופי בראשית העת החדשה — דרך תצפית, מתמטיקה, אנטומיה, ניסוי ושיטה מדעית.",
@@ -16,10 +16,28 @@ const UI = {
     sourcesEyebrow:"מקורות", sourcesTitle:"מקורות מומלצים להרחבה",
     footer:"אתר מחקר חזותי — מוכן להעלאה ל־GitHub Pages.",
     birth:"מקום לידה", death:"מקום פטירה", discovery:"הגילוי", impact:"השפעה", etymology:"אטימולוגיה מפורקת",
-    portraitMissing:"הוסף כאן תמונת דיוקן", home:"חזרה לדף הבית", summary:"תקציר", expandedTitle:"הרחבת התוכן", discoveryTitle:"הגילוי המרכזי", impactTitle:"השפעה היסטורית", personalConsequencesTitle:"השלכות אישיות על המגלה"
+    portraitMissing:"הוסף כאן תמונת דיוקן", home:"חזרה לדף הבית", summary:"תקציר", expandedTitle:"הרחבת התוכן", discoveryTitle:"הגילוי המרכזי", impactTitle:"השפעה היסטורית", personalConsequencesTitle:"השלכות אישיות על המגלה",
+    aboutEyebrow:"אודות היוצר", aboutTitle:"על האתר ועל היוצר",
+    aboutTextOne:"האתר הזה נוצר כפרויקט מחקר חזותי על מגלי המהפכה המדעית — אנשים ששינו את הדרך שבה אנו מבינים את היקום, את גוף האדם, את המתמטיקה ואת השיטה המדעית.",
+    aboutTextTwo:"המטרה היא להציג ידע היסטורי בצורה נגישה, נקייה ודו־לשונית: עברית ואנגלית. כל דף מוקדש לדמות אחרת, ומשלב ביוגרפיה, גילוי מרכזי, השפעה היסטורית, אטימולוגיה ותמונות.",
+    aboutBack:"חזרה לדף הבית", aboutStart:"התחל מהדף של גלילאו",
+    aboutWhyEyebrow:"הרעיון", aboutWhyTitle:"למה הקמתי את האתר?",
+    aboutWhyTextOne:"האתר נועד לחבר בין סיפור היסטורי לבין חוויית קריאה חזותית. במקום להציג רק רשימת שמות ותאריכים, הוא מנסה להראות כיצד רעיונות, תצפיות ואנשים אמיתיים שינו את הדרך שבה העולם הובן.",
+    aboutWhyTextTwo:"המהפכה המדעית מעניינת במיוחד משום שהיא אינה רק אוסף של תגליות. היא שינוי עמוק בשאלה איך יודעים דבר: האם מסתמכים על סמכות, או בודקים, מודדים, מתבוננים ומשווים?",
+    aboutMethodEyebrow:"דרך העבודה", aboutMethodTitle:"איך האתר בנוי?",
+    aboutMethodTextOne:"כל דמות באתר מקבלת דף נפרד עם מבנה קבוע: תקציר, גילוי מרכזי, השפעה היסטורית, הרחבת תוכן, השלכות אישיות ואטימולוגיה מפורקת.",
+    aboutMethodTextTwo:"העיצוב נבנה בסגנון כהה ומוזיאוני, כדי לתת תחושה של תערוכה דיגיטלית. התפריט מאפשר מעבר מהיר בין המגלים, והאתר כולו מותאם גם לקריאה מהנייד.",
+    aboutLearningEyebrow:"למידה", aboutLearningTitle:"למי האתר מתאים?",
+    aboutLearningTextOne:"האתר מתאים ללמידה עצמית, להיכרות ראשונית עם המהפכה המדעית, להשראה לפרויקטים חינוכיים, ולבניית מאגר ידע היסטורי נגיש בעברית ובאנגלית.",
+    aboutLearningTextTwo:"הוא מתאים במיוחד למי שאוהב היסטוריה של המדע, ביוגרפיות של מגלים, אטימולוגיה של מושגים, ואת החיבור בין טקסט, תמונה ועיצוב אינטראקטיבי.",
+    aboutFutureEyebrow:"המשך הדרך", aboutFutureTitle:"כיווני הרחבה עתידיים",
+    aboutFutureTextOne:"בהמשך אפשר להוסיף ציר זמן נפרד, מפות, דפי מקורות, גלריית כתבי יד, השוואות בין המודלים המדעיים, ודמויות נוספות כמו ניוטון, הויגנס, בויל, הארווי והוק.",
+    aboutFutureTextTwo:"כך האתר יוכל להתפתח ממבוא חזותי לאנציקלופדיה קטנה של המהפכה המדעית ושל ראשית המדע המודרני.",
+    aboutProjectEyebrow:"הפרויקט", aboutProjectTitle:"מה כבר קיים באתר?",
+    aboutStepOne:"דף בית נקי עם מבוא קצר.", aboutStepTwo:"תפריט מגלים נגלל עם מעבר לדפים אישיים.", aboutStepThree:"דף מפורט לכל מגלה עם תמונות ותוכן מורחב.", aboutStepFour:"דף אודות אישי שמסביר את מטרת האתר."
   },
   en:{
-    dir:"ltr", langBtn:"עברית", navSources:"Sources", discoverersBtn:"Discoverers",
+    dir:"ltr", langBtn:"עברית", navSources:"Sources", navAbout:"About", discoverersBtn:"Discoverers",
     eyebrow:"A bilingual Hebrew–English website",
     heroTitle:"Discoverers of the Scientific Revolution",
     heroSubtitle:"An introductory site about seven central figures who changed early modern European science through observation, mathematics, anatomy, experiment, and scientific method.",
@@ -33,7 +51,25 @@ const UI = {
     sourcesEyebrow:"Sources", sourcesTitle:"Recommended sources for expansion",
     footer:"A visual research website — ready for GitHub Pages.",
     birth:"Birth place", death:"Death place", discovery:"Discovery", impact:"Impact", etymology:"Decomposed etymology",
-    portraitMissing:"Add portrait image here", home:"Back to homepage", summary:"Summary", expandedTitle:"Expanded content", discoveryTitle:"Core discovery", impactTitle:"Historical impact", personalConsequencesTitle:"Personal consequences for the discoverer"
+    portraitMissing:"Add portrait image here", home:"Back to homepage", summary:"Summary", expandedTitle:"Expanded content", discoveryTitle:"Core discovery", impactTitle:"Historical impact", personalConsequencesTitle:"Personal consequences for the discoverer",
+    aboutEyebrow:"About the creator", aboutTitle:"About the site and its creator",
+    aboutTextOne:"This site was created as a visual research project about the discoverers of the Scientific Revolution — people who changed how we understand the universe, the human body, mathematics, and scientific method.",
+    aboutTextTwo:"The goal is to present historical knowledge in a clean, accessible, bilingual format: Hebrew and English. Each page focuses on a different figure and combines biography, core discovery, historical impact, etymology, and images.",
+    aboutBack:"Back to homepage", aboutStart:"Start with Galileo",
+    aboutWhyEyebrow:"The idea", aboutWhyTitle:"Why I created this site",
+    aboutWhyTextOne:"The site connects historical storytelling with a visual reading experience. Instead of showing only names and dates, it shows how ideas, observations, and real people changed the way the world was understood.",
+    aboutWhyTextTwo:"The Scientific Revolution is especially interesting because it is not only a collection of discoveries. It is a deep change in how people know things: do they rely on authority, or do they test, measure, observe, and compare?",
+    aboutMethodEyebrow:"Method", aboutMethodTitle:"How the site is built",
+    aboutMethodTextOne:"Each figure has a dedicated page with a fixed structure: summary, core discovery, historical impact, expanded content, personal consequences, and decomposed etymology.",
+    aboutMethodTextTwo:"The design uses a dark museum-like style to create the feeling of a digital exhibition. The menu provides quick movement between discoverers, and the whole site is adapted for mobile reading.",
+    aboutLearningEyebrow:"Learning", aboutLearningTitle:"Who is the site for?",
+    aboutLearningTextOne:"The site is suitable for self-learning, a first introduction to the Scientific Revolution, educational project inspiration, and building an accessible historical knowledge base in Hebrew and English.",
+    aboutLearningTextTwo:"It is especially suited for readers who enjoy history of science, biographies of discoverers, etymology of concepts, and the connection between text, image, and interactive design.",
+    aboutFutureEyebrow:"Next steps", aboutFutureTitle:"Future expansion directions",
+    aboutFutureTextOne:"In the future the site can add a separate timeline, maps, source pages, manuscript galleries, comparisons between scientific models, and additional figures such as Newton, Huygens, Boyle, Harvey, and Hooke.",
+    aboutFutureTextTwo:"In this way the site can grow from a visual introduction into a small encyclopedia of the Scientific Revolution and early modern science.",
+    aboutProjectEyebrow:"The project", aboutProjectTitle:"What already exists on the site?",
+    aboutStepOne:"A clean homepage with a short introduction.", aboutStepTwo:"A scrollable discoverers menu leading to personal pages.", aboutStepThree:"A detailed page for each discoverer with images and expanded content.", aboutStepFour:"A personal About page explaining the purpose of the site."
   }
 };
 
@@ -128,8 +164,8 @@ function renderProfilePage(){
         <table class="info-table">
           <tr><th>${UI[lang].birth}</th><td>${t.birth}</td></tr>
           <tr><th>${UI[lang].death}</th><td>${t.death}</td></tr>
-          <tr><th>${UI[lang].discovery}</th><td>${t.discovery}</td></tr>
-          <tr><th>${UI[lang].impact}</th><td>${t.impact}</td></tr>
+          <tr><th>${UI[lang].discovery}</th><td>${renderTextBlock(t.discovery)}</td></tr>
+          <tr><th>${UI[lang].impact}</th><td>${renderTextBlock(t.impact)}</td></tr>
         </table>
         <div class="detail-grid">
           <div class="detail-box wide"><h2>${UI[lang].summary}</h2>${renderTextBlock(t.summary)}</div>
