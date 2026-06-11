@@ -1,0 +1,51 @@
+Object.assign(UI.he, {
+  navGallery: "גלריה",
+  galleryEyebrow: "גלריה היסטורית",
+  galleryTitle: "תמונות המגלים והגילויים",
+  galleryIntro: "גלריה חזותית המרכזת את דיוקנאות המגלים ואת האיורים ההיסטוריים/מדעיים של הגילויים המרכזיים באתר.",
+  galleryPortraitsEyebrow: "דיוקנאות",
+  galleryPortraitsTitle: "המגלים עצמם",
+  galleryDiscoveriesEyebrow: "גילויים ורעיונות",
+  galleryDiscoveriesTitle: "הדימויים המדעיים",
+  gGalileoTitle: "גלילאו גליליי", gGalileoText: "תצפית, טלסקופ והערעור על המודל הגאוצנטרי.",
+  gCopernicusTitle: "ניקולאוס קופרניקוס", gCopernicusText: "המודל ההליוצנטרי והזזת מרכז היקום מן הארץ אל השמש.",
+  gKeplerTitle: "יוהאנס קפלר", gKeplerText: "חוקי תנועת הפלנטות והמסלולים האליפטיים.",
+  gTychoTitle: "טיכו ברהה", gTychoText: "מדידות מדויקות, סופרנובה ושביט בעידן שלפני הטלסקופ.",
+  gBaconTitle: "פרנסיס בייקון", gBaconText: "ניסוי, תצפית, אינדוקציה וזהירות מהטיות.",
+  gDescartesTitle: "רנה דקארט", gDescartesText: "הגאומטריה האנליטית, מערכת הצירים והמתודה.",
+  gVesaliusTitle: "אנדראס וסאליוס", gVesaliusText: "אנטומיה מודרנית, נתיחה ותצפית ישירה בגוף האדם.",
+  dGalileoTitle: "ירחי צדק", dGalileoText: "תצפית שהראתה שלא כל גוף שמימי מקיף את כדור הארץ.",
+  dCopernicusTitle: "המודל ההליוצנטרי", dCopernicusText: "השמש כמרכז מערכת הפלנטות במקום הארץ.",
+  dKeplerTitle: "מסלול אליפטי", dKeplerText: "הוויתור על המעגל המושלם לטובת מדידה מדויקת.",
+  dTychoTitle: "מצפה אורניבורג", dTychoText: "המדע כתשתית של מדידות, מכשירים וארגון ידע.",
+  dBaconTitle: "השיטה המדעית", dBaconText: "תצפית, ניסוי, אינדוקציה וביקורת הטיות.",
+  dDescartesTitle: "מערכת צירים", dDescartesText: "חיבור בין גאומטריה לאלגברה באמצעות קואורדינטות.",
+  dVesaliusTitle: "אנטומיה חזותית", dVesaliusText: "גוף האדם כמקור ידע ישיר ולא רק כסמכות טקסטואלית."
+});
+
+Object.assign(UI.en, {
+  navGallery: "Gallery",
+  galleryEyebrow: "Historical gallery",
+  galleryTitle: "Images of the discoverers and discoveries",
+  galleryIntro: "A visual gallery collecting the portraits of the discoverers and the historical/scientific illustrations of the central discoveries presented on the site.",
+  galleryPortraitsEyebrow: "Portraits",
+  galleryPortraitsTitle: "The discoverers themselves",
+  galleryDiscoveriesEyebrow: "Discoveries and ideas",
+  galleryDiscoveriesTitle: "Scientific images",
+  gGalileoTitle: "Galileo Galilei", gGalileoText: "Observation, telescope, and the challenge to geocentrism.",
+  gCopernicusTitle: "Nicolaus Copernicus", gCopernicusText: "The heliocentric model and the shift of the universe’s center from Earth to the Sun.",
+  gKeplerTitle: "Johannes Kepler", gKeplerText: "The laws of planetary motion and elliptical orbits.",
+  gTychoTitle: "Tycho Brahe", gTychoText: "Precise measurements, supernova, and comet observations before the telescope.",
+  gBaconTitle: "Francis Bacon", gBaconText: "Experiment, observation, induction, and caution against biases.",
+  gDescartesTitle: "René Descartes", gDescartesText: "Analytic geometry, the coordinate system, and method.",
+  gVesaliusTitle: "Andreas Vesalius", gVesaliusText: "Modern anatomy, dissection, and direct observation of the human body.",
+  dGalileoTitle: "Jupiter’s moons", dGalileoText: "An observation showing that not every heavenly body orbits Earth.",
+  dCopernicusTitle: "The heliocentric model", dCopernicusText: "The Sun as the center of the planetary system instead of Earth.",
+  dKeplerTitle: "Elliptical orbit", dKeplerText: "Abandoning the perfect circle in favor of accurate measurement.",
+  dTychoTitle: "Uraniborg observatory", dTychoText: "Science as a structure of measurements, instruments, and organized knowledge.",
+  dBaconTitle: "Scientific method", dBaconText: "Observation, experiment, induction, and criticism of bias.",
+  dDescartesTitle: "Coordinate plane", dDescartesText: "Connecting geometry and algebra through coordinates.",
+  dVesaliusTitle: "Visual anatomy", dVesaliusText: "The human body as a direct source of knowledge, not only textual authority."
+});
+
+applyLang();
