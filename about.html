@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>אודות | מגלי המהפכה המדעית</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">מגלי המהפכה המדעית</a>
+    <div class="nav-actions">
+      <button id="langBtn" class="pill">English</button>
+      <div class="discoverers-menu">
+        <button id="discoverersBtn" class="pill menu-button" aria-expanded="false" data-i18n="discoverersBtn">מגלים</button>
+        <div id="discoverersPanel" class="discoverers-panel" aria-hidden="true"></div>
+      </div>
+      <a href="about.html" class="nav-link" data-i18n="navAbout">אודות</a>
+      <a href="index.html#sources" class="nav-link" data-i18n="navSources">מקורות</a>
+    </div>
+  </nav>
+</header>
+
+<main class="about-main">
+  <section class="about-card">
+    <div class="about-image-wrap">
+      <img class="about-photo" src="ramprofile.png" alt="תמונת פרופיל של יוצר האתר" onerror="this.outerHTML='<div class=&quot;fallback about-fallback&quot;>התמונה ramprofile.png עדיין לא נטענה למאגר או לא נמצאת בתיקייה הראשית.</div>'">
+    </div>
+    <div class="about-content">
+      <p class="eyebrow" data-i18n="aboutEyebrow">אודות היוצר</p>
+      <h1 data-i18n="aboutTitle">על האתר ועל היוצר</h1>
+      <p data-i18n="aboutTextOne">האתר הזה נוצר כפרויקט מחקר חזותי על מגלי המהפכה המדעית — אנשים ששינו את הדרך שבה אנו מבינים את היקום, את גוף האדם, את המתמטיקה ואת השיטה המדעית.</p>
+      <p data-i18n="aboutTextTwo">המטרה היא להציג ידע היסטורי בצורה נגישה, נקייה ודו־לשונית: עברית ואנגלית. כל דף מוקדש לדמות אחרת, ומשלב ביוגרפיה, גילוי מרכזי, השפעה היסטורית, אטימולוגיה ותמונות.</p>
+      <p data-i18n="aboutTextThree">הפרויקט מתאים ללמידה, השראה, בניית אתר אישי־חינוכי והרחבה עתידית עם עוד דמויות, מקורות, מפות, צירי זמן ותמונות היסטוריות.</p>
+      <a class="button" href="index.html" data-i18n="aboutBack">חזרה לדף הבית</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p data-i18n="footer">אתר מחקר חזותי — מוכן להעלאה ל־GitHub Pages.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
